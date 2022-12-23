@@ -1,0 +1,123 @@
+whoami
+whaim
+whoami
+echo "Hello World"
+date
+cal
+man cal
+cal -3
+history | head
+history | tail
+clear
+pwd
+cd /
+cd ..
+pwd
+ls
+ls /var
+cd
+cd ..
+pwd
+ls
+cd
+ls -l
+mkdir fruits
+cd /
+mkdir ~/animals
+touch /tmp/temp
+cd
+cd fruits
+touch apple banana pinaple lion
+touch ../animals/cat.txt ../animals/dog.txt ../animals/elephant.txt
+ls -l apple
+ls b*
+ls *a
+ls [bi]*
+ls b* i*
+cp /etc/passwd ~
+cat /etc/issue
+cp /etc/issue apple
+cat apple
+mv lion ../animals
+mv pinaple pinapple
+wc -l /etc/passwd
+cd
+ln -s /etc/passwd passwd_link
+ln .bash_history history_hard
+ls -l .bash_history
+rm fruits/apple
+mkdir rmme
+rmdir rmme
+rmdir fruits
+rm -rf fruits
+man rm
+cat /etc/passwd /var/log/boot.log
+cp /etc/initcpio/ ./
+cp -r /etc/initcpio ./
+rm -rf initcpio
+cut -d: -f1 /etc/passwd | sort 
+cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+man column 
+cut -d: /etc/passwd | column -ts: | less
+clear
+nvim /etc/passwd
+cut -d: -f1,2,3,4 /etc/passwd | column -ts: | less
+cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+cut -d: -f1,3 /etc/passwd | column -ts: | less
+grep :/bin/bash /etc/passwd | wc -l
+grep :/bin/bash /etc/passwd
+grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+man sort
+rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -25
+rpm -ql man-db | xargs -l du 2> /dev/null  | sort -n
+top -b -n1 
+top -b -n1 | tail -n+8 | sort -k11
+top -b -n1 | tail -n+8 | sort -k12
+top -b -n1 | tail -n+8 | cut -c9- | awk '{print $11, $5}'
+top -b -n1 | tail -n+8 | cut -c9- | awk '{print $11, $9}' | tr ' ' '\t'
+clear
+sort /etc/passwd | tr ":" " "
+sort /etc/passwd | awk -F ":" '{print $1, $NF}'
+mkdir labs
+cd labs
+wget https://raw.githubusercontent.com/git/git/master/Documentation/user-manual.txt
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -n5
+nvim user-manual.txt
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | tail -n5
+nvim user-manual.txt
+clear
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -n5
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | tail -n5
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -n5
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -n5
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+clear
+cat user-manual.txt | tr ' ' '\012' | head
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | head
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' 
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' 
+cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | wc -l
+clear
+cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | wc -l
+tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+ping ya.ru
+curl wttr.in
+hostname -I
+man hostname
+curl ifconfig.me
+ifconfig -a
+hostname -I | awk '{print $1}'
+wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+less README-ru.md
+id
+whoami
+sudo id
+id
+sudo less /var/log/messages
+less /var/log/messages
+su
+cat ../.zsh_history > lab1_history.txt

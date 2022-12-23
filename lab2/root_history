@@ -1,0 +1,6 @@
+cd test/
+chown root file
+chmod 600 file
+exit
+chmod g+r test/file
+exit

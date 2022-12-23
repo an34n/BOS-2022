@@ -1,0 +1,40 @@
+cd
+mkdir test && cd teest
+cd test
+touch file
+ls -l
+chmod 000 file
+echo -ne "ÑÐµÑÑ" > file
+cat file
+chmod u+w file
+ls -l
+echo -ne "test" > file
+cat file
+chmod g+r file
+ls -l
+cat file
+chmod u+r file
+ls -l
+cat file
+mkdir dir
+touch dir/new_file
+echo -ne "file 2" > dir/new_file
+ls dir
+chmod -x dir
+ls -l
+cat dir/new_file
+rm dir/new_file
+man chown
+chown root:root file
+umask 0177
+touch file1
+ls -l
+umask 0111
+touch file2
+man umask
+ls -l
+su
+cat file
+su
+cat file
+ls -lR

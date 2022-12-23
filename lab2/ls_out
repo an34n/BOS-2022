@@ -1,0 +1,11 @@
+.:
+total 8
+drw-r--r-- 2 sarkoxedaf sarkoxedaf 4096 Nov 27 08:05 dir
+-rw-r----- 1 root       sarkoxedaf    5 Nov 27 08:03 file
+-rw------- 1 sarkoxedaf sarkoxedaf    0 Nov 27 08:11 file1
+-rw-rw-rw- 1 sarkoxedaf sarkoxedaf    0 Nov 27 08:12 file2
+
+./dir:
+/bin/ls: cannot access './dir/new_file': Permission denied
+total 0
+-????????? ? ? ? ?            ? new_file
